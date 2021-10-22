@@ -2,11 +2,11 @@
   overflow: hidden;
   font-size: 25px; /* this can be any font size you want */
 
-  border-right: 2px solid #50bdb8; /* change this color in the keyframe too */
+  border-right: 5px solid white; /* change this color in the keyframe too */
 
   white-space: nowrap;
   margin: 0 auto;
-  animation: typeit 3.5s steps(40, end), right-border 0.5s step-end infinite;
+  animation: typeit 3.5s steps(30, end), right-border 1s step-end infinite;
 }
 
 @keyframes typeit {
@@ -24,7 +24,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: #50bdb8; /* change this in the CSS above too */
+    border-color: white; /* change this in the CSS above too */
   }
 }
 
@@ -63,9 +63,13 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: #1f4275cc;
   color: white;
   font-weight: 600;
+
+  @media screen and (max-width: 400px) {
+    right: -12px;
+  }
 }
 
 .toolbar img {
@@ -89,7 +93,7 @@ p {
 
 .content {
   display: flex;
-  margin: 400px auto 32px;
+  margin: 10px auto 32px;
   padding: 0 16px;
   max-width: 960px;
   flex-direction: column;
@@ -156,7 +160,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card.highlight-card {
-  background-color: #1976d2;
+  background-color: #1f4275cc;
   color: white;
   font-weight: 600;
   border: none;
@@ -319,5 +323,25 @@ svg#clouds {
   svg#rocket-smoke {
     display: none;
     visibility: hidden;
+  }
+}
+
+.capslock-gif {
+  height: 450px;
+  display: flex;
+
+  img {
+    margin: auto;
+    height: 600px;
+    width: 800px;
+
+    @media screen and (max-width: 768px) {
+      height: 300px;
+      width: 400px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 777px;
   }
 }
